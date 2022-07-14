@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background: url('/img/michal-kvac-imagine-small.jpg');
+    background-position: center;
+    background-size: cover;
+
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 60px;
+}
+
+.navbar {
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+nav ul li a {
+    color: rgb(249, 224, 255);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav ul li ::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(253, 188, 255);
+    display: block;
+    margin-top: 4px;
+    transition: 1s;
+
+}
+
+nav ul li :hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: rgb(253, 188, 255);
+}
+
+
+/* IMAGES */
+
+.container {
+    border-radius: 10px;
+    position: relative;
+    width: 1160px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    margin: auto;
+}
+
+.container .box {
+    border-radius: 10px;
+    position: relative;
+    width: 275px;
+    height: 275px;
+    background: #000;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    margin-right: 15px;
+    margin-top: 45px;
+}
+
+.container:hover .box {
+    border-radius: 10px;
+    transform: rotateY(25deg);
+}
+
+.container .box:hover~.box {
+    border-radius: 10px;
+    transform: rotateY(25deg);
+}
+
+.container .box:hover {
+    border-radius: 10px;
+    transform: rotateY(0deg) scale(1.1);
+    z-index: 1;
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.container .box .imgbox {
+    border-radius: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container .box .imgbox::before {
+    border-radius: 10px;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(180deg, rgba(165, 151, 29, 0.376), #000); */
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    mix-blend-mode: multiply;
+    /* transform: translateY(200px); */
+}
+
+.container .box .imgbox::before {
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.container .box .imgbox img {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .box .content h2 {
+    border-radius: 10px;
+    color: beige;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+
+.container .box:hover .content h2 {
+    border-radius: 10px;
+    transform: translateY(0px);
+}
+
+.container .box .content p {
+    margin: 4px;
+    border-radius: 10px;
+   color: rgb(240, 206, 255);
+    transition: 0.5s;
+    font-size: 14px;
+    transform: rotateY(200px);
+    transition-delay: 0.5s;
+}
+
+.container .box:hover .content p {
+    border-radius: 10px;
+    transform: translateY(0px);
+}
+
+
+.imagesall
+{
+    display: flex;
+    margin-bottom: 100px;
+    margin-top: 0px;
+}
